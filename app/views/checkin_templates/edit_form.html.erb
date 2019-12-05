@@ -1,0 +1,42 @@
+<h1>
+  Edit checkin #<%= @checkin.id %>
+</h1>
+
+<hr>
+
+<form action="/update_checkin/<%= @checkin.id %>" method="post">
+
+  <div class="form-group">
+    <label for="description">
+      Description
+    </label>
+
+    <input type="text" id="description" name="description" class="form-control" value="<%= @checkin.description %>">
+  </div>
+
+  <div class="form-group">
+    <label for="lat">
+      Lat
+    </label>
+
+    <input type="text" id="lat" name="lat" class="form-control" value="<%= @checkin.lat %>">
+  </div>
+
+  <div class="form-group">
+    <label for="lng">
+      Lng
+    </label>
+
+    <input type="text" id="lng" name="lng" class="form-control" value="<%= @checkin.lng %>">
+  </div>
+
+  <button class="btn btn-block btn-outline-secondary">
+    Update checkin
+  </button>
+</form>
+
+<hr>
+
+<a href="/checkins">
+  Go back
+</a>
