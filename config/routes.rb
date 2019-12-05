@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get("/", { :controller => "checkins", :action => "new_form" })
+
   # Routes for the Checkin resource:
 
   # CREATE
