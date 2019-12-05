@@ -41,3 +41,19 @@
 <a href="/checkins">
   Go back
 </a>
+
+<script>
+  var latInput = document.getElementById("lat");
+  var lngInput = document.getElementById("lng");
+
+  function getLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
+  function showPosition(position) {
+    latInput.value = position.coords.latitude;
+    lngInput.value = position.coords.longitude;
+  }
+
+  getLocation();
+</script>
